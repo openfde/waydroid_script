@@ -19,6 +19,12 @@ class Gapps(General):
             "x86": ["https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20231028/MindTheGapps-13.0.0-x86-20231028.zip", "f12b6a8ed14eedbb4b5b3c932a865956"],
             "arm64-v8a": ["https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20231028/MindTheGapps-13.0.0-arm64-20231028.zip", "11180da0a5d9f2ed2863882c30a8d556"],
             "armeabi-v7a": ["https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20231028/MindTheGapps-13.0.0-arm-20231028.zip", "d525c980bac427844aa4cb01628f8a8f"]
+        },
+        "14": {
+            "x86_64": ["https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20250330/MindTheGapps-14.0.0-x86_64-20250330.zip", "f9da567989d18aa33d51cf6faa385798"],
+            "x86": ["https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20250330/MindTheGapps-14.0.0-x86_64-20250330.zip", "f9da567989d18aa33d51cf6faa385798"],
+            "arm64-v8a": ["https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20250330/MindTheGapps-14.0.0-arm64-20250330.zip", "5cf957fb34957153ea8623b37ccf5fcb"],
+            "armeabi-v7a": ["https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20250330/MindTheGapps-14.0.0-arm-20250330.zip", "3cf42614d0cad15b3dda11aa77ada7dd"]
         }
     }
     android_version = ...
@@ -107,7 +113,7 @@ class Gapps(General):
     def copy(self):
         if self.android_version == "11":
             return self.copy_11()
-        elif self.android_version == "13":
+        elif self.android_version == "13" or self.android_version == "14" :
             return self.copy_13()
 
     def copy_11(self):

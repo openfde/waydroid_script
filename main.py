@@ -208,9 +208,10 @@ def interact():
         choices=[
             Choice(name="Android 11", value="11"),
             Choice(name="Android 13", value="13"),
+            Choice(name="Android 14", value="14"),
             Choice(name="Exit", value=None)
         ],
-        default="13",
+        default="14",
     ).execute()
     if not android_version:
         exit()
@@ -287,8 +288,8 @@ def main():
     parser.add_argument('-a', '--android-version',
                         dest='android_version',
                         help='Specify the Android version',
-                        default="13",
-                        choices=["11", "13"])
+                        default="14",
+                        choices=["11", "13","14"])
 
     # android command
     certified = subparsers.add_parser(
